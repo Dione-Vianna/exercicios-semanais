@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+  <input type="text">
+  <script>
+    var a = prompt("Digite primeiro número")
+    var b = prompt("Digite segundo número")
+    menorNumero()
+    function menorNumero() {
+      if (a < b) {
+        alert(a)
+      } else {
+        alert(b)
+      }
+    }
+
+    // function maiorNumero(x, y) {
+    //   var maior = Math.max(x, y)
+    //   var menor = Math.min(x, y)
+    //   document.write(`O maior número é ${maior} e o menor número é ${menor}`)
+    // }
+
+    // var a = []
+    // a = prompt('Digite um texto')
+    // function letraL() {
+    //   document.write(frase.split(letra).length - 1);
+    // }
+
+    // var valor = 'a'
+    // contarCaracter()
+    // function contarCaracter(valor) {
+    //   var cont = valor.length;
+
+    //   if (cont == 1 || cont == 0) {
+    //     document.getElementById("quantidade").value = cont + " Caracter";
+    //   } else {
+    //     document.getElementById("quantidade").value = cont + " Caracteres";
+    //   }
+    // }
+
+    var texto = prompt('Digite um texto')
+    letraL()
+
+    function letraL() {
+      var valor = 0
+      for (i = 0; i < texto.length; i++) {
+        if (texto[i] == "L") {
+          valor++;
+        }
+      }
+      alert(valor)
+    }
+
+
+
+  </script>
+</body>
+
+</html>

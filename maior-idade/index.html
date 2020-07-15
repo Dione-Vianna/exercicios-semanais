@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>serratec-maioridade</title>
+</head>
+<body>
+
+    <style>
+        #caixa {
+            padding: 20px;
+            margin: 20px;
+            width: 300px;
+            border: 2px solid black;
+            background-color: #999;
+            text-shadow: 2px 2px 0px black;
+            color: whitesmoke;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+
+    <div id="caixa"></div>
+
+    <script>
+        function maiorIdade() {
+            var pessoasArray = []
+
+            while (true) {
+                var pessoa = {'nome': '', 'idade': ''}
+                var nome = prompt('Digite um nome (ou SAIR para encerrar): ')
+                if (nome.toUpperCase() != 'SAIR') {
+                    var idade    = parseInt(prompt('Digite a idade: '))
+                    pessoa.nome  = nome
+                    pessoa.idade = idade
+                    pessoasArray.push(pessoa)
+                    pessoa = {}
+                } else {
+                    break
+                }
+            }
+
+            for (i = 0; i < pessoasArray.length; i++) {
+                nome = pessoasArray[i].nome
+                idade = pessoasArray[i].idade
+                if (idade > 18) {
+                    document.getElementById('caixa').innerHTML += `<p>Nome: ${nome} | Idade: ${idade}</p>`
+                }
+            }
+
+        }
+    </script>
+</body>
+</html>

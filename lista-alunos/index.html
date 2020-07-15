@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>serratec-maioridade</title>
+</head>
+
+<body>
+
+    <input type="text" id="nome">
+    <input type="text" id="idade">
+    <button onclick="novoNome()">Novo nome</button>
+    <!-- <button onclick="novaDiciplina()">Diciplina</button> -->
+
+    <div id="aluno"></div>
+    <div id="diciplina"></div>
+
+    <script>
+            var pessoasArray = []
+        function novoNome() {
+            var nome = document.getElementById('nome').value
+            if(nome != ""){
+            var pessoa = { 'nome': '', 'idade': '' }
+            var idade = parseInt(document.getElementById("idade").value)
+            pessoa.nome = nome
+            pessoa.idade = idade
+            pessoasArray.push(pessoa)
+            document.getElementById('aluno').innerHTML += `<p>Nome: ${nome} ${idade} anos</p>`
+            //pessoa = {}
+
+            // for (i = 0; i < pessoasArray.length; i++) {
+            //     nome = pessoasArray[i].nome
+            //     idade = pessoasArray[i].idade
+            //     document.getElementById('aluno').innerHTML += `<p>Nome: ${nome} ${idade} anos</p>`
+            // }
+            document.getElementById('nome').value = '';
+            document.getElementById('idade').value = '';
+        } else{
+            alert('Nome obrigatorio')
+        }
+        }
+
+        function novaDiciplina() {
+            var diciplina = prompt('Digite o nome da diciplina ')
+            var diciplinaArray = []
+            var diciplinas = { 'diciplina': '', }
+            diciplinas.diciplina = diciplina
+            diciplinaArray.push(diciplinas)
+            diciplinas = {}
+
+            for (i = 0; i < diciplinaArray.length; i++) {
+                diciplina = diciplinaArray[i].diciplina
+                document.getElementById('diciplina').innerHTML += `<p>Diciplina: ${diciplina} </p>`
+            }
+        }
+
+    </script>
+</body>
+
+</html>
